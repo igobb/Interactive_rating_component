@@ -1,0 +1,119 @@
+:root {
+    --color-body: hsl(217, 55%, 12%);
+    --color-main: hsl(213, 19%, 18%);
+    --color-button: hsl(25, 97%, 53%);
+    --color-rating: hsl(216, 12%, 54%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-paragraph: hsl(217, 12%, 63%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    background-color: var(--color-body);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 15px;
+}
+
+.container, .second_window {
+    background: radial-gradient(at top, hsl(212, 29%, 19%), hsl(224, 41%, 16%));
+    max-width: 400px;
+    padding: 36px 28px;
+    border-radius: 20px;
+}
+
+.icon_star {
+    background-color: var(--color-main);
+    padding: 15px;
+    border-radius: 50%;
+    margin-bottom: 2em;
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--color-white);
+    margin-bottom: 0.5em;
+}
+
+p {
+    color: var(--color-paragraph)
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    background-color: var(--color-main);
+    color: var(--color-paragraph);
+    width: 50px;
+    height: 50px;
+    padding-top: 4px;
+    border-radius: 50%;
+    margin: 2em 0;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.rating:hover {
+    
+    background-color: var(--color-button);
+    color: var(--color-white);
+    transition: 0.3s;
+}
+.rating:focus {
+    background-color: var(--color-rating);
+    color: var(--color-white);
+}
+.btn-submit {
+    background-color: var(--color-button);
+    color: var(--color-white);
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 20px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.margin_top{
+    margin-top: 2em;
+}
+
+.submit:hover {
+    background-color: var(--color-white);
+    color: var(--color-button);
+    transition: 0.3s;
+}
+.second_window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+.result {
+    margin: 1em 0;
+    padding: 8px 20px;
+    background-color: var(--color-body);
+    color: var(--color-button);
+    border-radius: 15px;
+}

@@ -3,6 +3,7 @@ const second_window = document.querySelector('.second_window')
 const submitButton = document.getElementById('submit')
 const againButton = document.getElementById('rate-again')
 const rateResult = document.getElementById('rate-result')
+const lowResult = document.getElementById('low-result')
 const rates = document.querySelectorAll('.rating')
 
 submitButton.addEventListener('click', () => {
@@ -17,13 +18,27 @@ againButton.addEventListener('click', () => {
 
 rates.forEach((rate) => {
     rate.addEventListener('click', () => {
-        let result = rate.innerHTML
-        if (result < 3) {
-            result = result + " (CZEMU TAK MAŁO :<)"
-        }
+        let result = rate.innerHTML  
         rateResult.innerHTML = result
+        
+        if (result < 3) {
+            lowResult.innerHTML = " (What can we do to improve our services?)";
+        }
+        else {
+            lowResult.innerHTML = " (Thanks!)";
+        }
+        
     })
 })
+
+if (rates < 3) {
+    lowResult.innerText = " (What can we do to improve our services?)";
+}
+
+
+
+
+
 
 //also working
 //     submitButton.addEventListener('click', () => {

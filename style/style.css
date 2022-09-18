@@ -117,3 +117,14 @@ ul {
     color: var(--color-button);
     border-radius: 15px;
 }
+
+@media only screen and (max-width: 375px) {
+    .container, .second_window {
+        max-width: 335px;
+        padding: 28px 20px;
+    }
+    .btn-submit {
+        padding: 20px 0;
+        border-radius: 30px;
+    }
+}
